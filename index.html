@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Dine A/C Restaurant</title>
+    <meta name="description" content="Multi-cuisine family restaurant in Puri offering North Indian and Chinese dishes with comfortable indoor seating and a fine dining atmosphere.">
+    <!-- Tailwind v4 CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand-primary: #8B0000;
+            --color-brand-secondary: #F5E6CA;
+            --color-brand-accent: #D4AF37;
+            --color-brand-bg: #FFF8F0;
+            --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+            --font-display: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+        body {
+            background-color: var(--color-brand-bg);
+            color: #1a1a1a;
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+        }
+        ::selection {
+            background-color: var(--color-brand-primary);
+            color: white;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-900">
+    
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-brand-bg/95 backdrop-blur-md border-b border-brand-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="text-brand-primary">
+                        <i data-lucide="utensils" class="w-8 h-8"></i>
+                    </div>
+                    <a href="#home" class="font-display font-bold text-xl md:text-2xl text-brand-primary">
+                        Fine Dine A/C Restaurant
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-brand-primary transition-colors font-medium text-sm tracking-widest uppercase">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-brand-primary transition-colors font-medium text-sm tracking-widest uppercase">About</a>
+                    <a href="#menu" class="nav-link text-gray-700 hover:text-brand-primary transition-colors font-medium text-sm tracking-widest uppercase">Menu</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-brand-primary transition-colors font-medium text-sm tracking-widest uppercase">Gallery</a>
+                    <a href="#reviews" class="nav-link text-gray-700 hover:text-brand-primary transition-colors font-medium text-sm tracking-widest uppercase">Reviews</a>
+                    <a href="#reservation" class="nav-link text-gray-700 hover:text-brand-primary transition-colors font-medium text-sm tracking-widest uppercase">Reservation</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-primary hover:text-brand-accent transition-colors">
+                        <i data-lucide="menu" class="w-7 h-7" id="menu-icon-open"></i>
+                        <i data-lucide="x" class="w-7 h-7 hidden" id="menu-icon-close"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-bg border-b border-brand-accent/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-brand-secondary/30 rounded-md">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-brand-secondary/30 rounded-md">About</a>
+                <a href="#menu" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-brand-secondary/30 rounded-md">Menu</a>
+                <a href="#gallery" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-brand-secondary/30 rounded-md">Gallery</a>
+                <a href="#reviews" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-brand-secondary/30 rounded-md">Reviews</a>
+                <a href="#reservation" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-primary hover:bg-brand-secondary/30 rounded-md">Reservation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1920" alt="Fine Dine A/C Restaurant Cover" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 animate-fade-in-up">
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Taste the Royal Flavor</h1>
+            <p class="text-lg md:text-2xl text-brand-secondary mb-10 font-light">Enjoy authentic flavors, family dining, and a relaxing atmosphere near Puri Sea Beach.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class="px-8 py-4 bg-brand-primary text-white text-sm font-semibold tracking-widest uppercase hover:bg-red-900 transition-colors rounded-sm text-center inline-block">View Menu</a>
+                <a href="#reservation" class="px-8 py-4 bg-transparent border border-brand-accent text-brand-accent text-sm font-semibold tracking-widest uppercase hover:bg-brand-accent hover:text-black transition-colors rounded-sm text-center inline-block">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex flex-col">
+                        <span>Where Every Meal</span>
+                        <span class="text-brand-primary italic mt-2">Feels Special</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-brand-accent mb-8"></div>
+                    
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Multi-cuisine family restaurant in Puri offering North Indian and Chinese dishes with comfortable indoor seating and a fine dining atmosphere. Located near Sea Beach Road, we offer a relaxing dining experience for tourists and locals alike with a specially curated menu featuring North Indian and Chinese delicacies.
+                    </p>
+                    
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Since 2020, we have been dedicated to providing a family-friendly environment enriched with air-conditioned comfort, excellent service, and unforgettable flavors.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-secondary flex items-center justify-center flex-shrink-0 text-brand-primary">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Location</h4>
+                                <p class="text-gray-600">Sea Beach Road, Hariharchhaka, Puri, Odisha, India - 752001</p>
+                                <a href="https://maps.app.goo.gl/YhKoou48pCRcDeh49" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm text-brand-primary font-medium mt-2 hover:text-red-700 transition-colors">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i> Get Directions
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-secondary flex items-center justify-center flex-shrink-0 text-brand-primary">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Opening Hours</h4>
+                                <p class="text-gray-600">Open Daily: 8:00 AM – 12:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="aspect-[4/5] bg-gray-200 relative overflow-hidden rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800" alt="Restaurant Interior" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-brand-secondary p-4 hidden md:block rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=400" alt="Food Details" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-secondary/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Extensive Menu</h2>
+                <div class="flex justify-center flex-col items-center gap-4">
+                    <div class="w-24 h-1 bg-brand-accent"></div>
+                    <p class="text-gray-500 max-w-2xl mx-auto">Explore authentic flavors carefully crafted by our culinary experts, ranging from piping hot Soups to rich Biryanis.</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="mt-8 max-w-md mx-auto relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
+                    </div>
+                    <input type="text" id="menu-search" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-shadow" placeholder="Search our menu...">
+                    <button class="absolute inset-y-0 right-0 pr-3 flex items-center" id="clear-search" style="display: none;">
+                        <i data-lucide="x" class="w-5 h-5 text-gray-400 hover:text-brand-primary"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 items-start" id="menu-grid">
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🥟 Papad
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Plain Papad
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹20
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Rosted Papad
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹25
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Masala Papad
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹40
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🥗 Salad
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Onion Salad
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹40
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Green Salad
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹50
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mix Salad
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹80
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍲 Soup
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Hot & Soup
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹100
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Manchow Soup
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹100
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Sweet Corn Soup
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹100
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Veg Hot & Soup
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Manchow Soup
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Sweet Corn Soup
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍜 Noodles
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Noodles
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Mix Noodles
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Noodles
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Noodles
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Mix Noodles
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🌽 American Corn
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Corn Salt & Pepper
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Corn Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Crispy Chilly Corn
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹160
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍛 Biryani
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Hydrabadi Dum Biryani
+                                </h4>
+                            </div>
+                            <div class="flex flex-col items-end text-sm"><span class="text-gray-500 font-medium"><span class="text-xs uppercase tracking-wider mr-1">Half</span>₹120</span><span class="text-brand-primary font-bold"><span class="text-xs uppercase tracking-wider text-gray-500 mr-1">Full</span>₹180</span></div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Hydrabadi Dum Biryani
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mutton Hydrabadi Dum Biryani
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🫓 Roti
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Tawa
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹8
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Tawa Butter Roti
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹10
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Tandoori Roti
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹15
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Tandoori Butter Roti
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹20
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Plain Paratha
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹20
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Butter Paratha
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹25
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Plain Naan
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹25
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Butter Naan
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹35
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Ghee Paratha
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹60
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Garlic Butter Naan
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹65
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Masala Kulcha
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹70
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🥣 Pakhala
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Dahi Pakhala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Non-Veg Dahi Pakhala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍚 Rice
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Plain Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹50
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Basmati Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹80
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Jeera Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Lemon Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Ghee Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Curd Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Polao
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Green Peas Polao
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Fried Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Fried Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Fried Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Mix Fried Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹240
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Mix Fried Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹240
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Prawn Fried Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹240
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Non-Veg Mix Fried Rice
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹260
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍲 Dal
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Plain Dal
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹50
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Dal Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹80
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Butter Dal Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Dal Tadka
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Butter Dal Tadka
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🥦 Vegetable
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Aloo Jeera
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹80
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Aloo Dum
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹80
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Crispy Veg
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Aloo Porawa Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Crispy Veg
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Gobi Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Gobi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chana Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Green Peas Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Bhendi Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mix Veg
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Kadie Veg
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Do Piazza
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Hyderabadi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Panjabi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Korma
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹140
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Manchurian
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🧀 Paneer
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Pakoda
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mutter Paneer
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹160
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Salt & Pepper
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Manchurian
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Panjabi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Kadie Paneer
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Dopiaza
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Hyderabadi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹199
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Paneer
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Butter Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Bharta
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Lababdar
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Korma
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹280
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍄 Mushroom
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Pakoda
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Salt & Pepper
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Mushroom
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Manchurian
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Dopiaza
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Hyderabadi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹199
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Panjabi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Kadai Mushroom
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom 65
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍱 Thali
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Veg Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Roti Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹99
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Fish Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Paneer Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹160
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mushroom Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹160
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹160
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹160
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Prawn Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Parsi Thali
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🐟 Fish
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Fish Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹80
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Fish Curry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹100
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Fish Tawa Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹120
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Fish Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Fish (Boneless)
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Fish Pakoda (Boneless)
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Fish Finger (Boneless)
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Parsi Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Parsi Tawa Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Pamphlet Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Pamphlet Tawa Fry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Parsi Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹260
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Pamphlet Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹280
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Crab Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹280
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🥚 Egg
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Bhujia
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹40
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Omelet
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹60
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Pouch
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹60
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Curry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹89
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹100
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Bhuj Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹100
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Egg Tadka
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹100
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍖 Mutton
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mutton Curry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mutton Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mutton Kasha
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹260
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mutton Roganjosh
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹280
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍗 Chicken
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Pakoda
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Garlic Chicken
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Lemon Chicken
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹180
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Crispy Chicken
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Chicken
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Manchurian
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Dopiaza
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Panjabi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Hyderabadi
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken 65
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Mutton Curry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Bharta
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Butter Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Mughlai
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Korma
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chicken Lababdar
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-bg/50 p-8 rounded-sm border border-brand-accent/10 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-2xl font-display font-medium text-brand-primary mb-8 border-b border-gray-200 pb-3 flex items-center justify-between">
+                        🍤 Prawn
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Prawn Pakoda
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹150
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Chilly Prawn
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Prawn Curry
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Prawn Masala
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹220
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Prawn Do Plaza
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end gap-4 group">
+                            <div class="flex-1 border-b border-dashed border-gray-300 pb-1 mb-1 relative">
+                                <h4 class="text-base font-bold text-gray-800 flex items-center gap-2">
+                                    Kadai Prawn
+                                </h4>
+                            </div>
+                            <div class="text-brand-primary font-bold text-lg whitespace-nowrap">
+                                ₹250
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-brand-primary text-white p-8 md:p-12 text-center rounded-sm border border-brand-accent shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="text-left">
+                        <h4 class="font-display text-3xl font-bold mb-2 text-brand-secondary">Planning a special dinner?</h4>
+                        <p class="text-white/80">Average Cost for Two: ₹300 – ₹400 • All Payment Methods Accepted</p>
+                    </div>
+                    <a href="#reservation" class="px-8 flex-shrink-0 py-4 bg-brand-accent text-gray-900 font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-yellow-500 transition-colors cursor-pointer inline-block text-center">
+                        Book Your Table
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 bg-brand-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">A Glimpse Inside</h2>
+                <div class="flex justify-center">
+                    <div class="w-24 h-1 bg-brand-accent"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer md:col-span-2 aspect-[2/1] lg:aspect-video" data-img="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800" alt="Gallery 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800" alt="Gallery 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Gallery 3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800" alt="Gallery 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800" alt="Gallery 5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer md:col-span-2 aspect-[2/1] lg:aspect-video" data-img="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=800" alt="Gallery 6" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80&w=800" alt="Gallery 7" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800" alt="Gallery 8" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800" alt="Gallery 9" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer aspect-square" data-img="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Gallery 10" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white border border-brand-accent px-4 py-2 uppercase tracking-widest text-xs font-semibold backdrop-blur-sm bg-black/30">View Image</span>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 p-4 transition-opacity duration-300 opacity-0">
+        <button id="close-modal" class="absolute top-6 right-6 text-white hover:text-brand-accent transition-colors z-50 p-2 cursor-pointer">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <img id="modal-img" src="" alt="Expanded view" class="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl transition-transform duration-300 scale-95">
+    </div>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-10">Loved by Our Guests</h2>
+                <div class="flex flex-col items-center justify-center gap-2">
+                    <div class="text-6xl md:text-7xl font-display font-bold text-brand-primary leading-none mb-2">
+                        4.8/5
+                    </div>
+                    <div class="flex items-center gap-1 text-brand-accent mb-2">
+                        <i data-lucide="star" class="w-7 h-7 fill-current"></i>
+                        <i data-lucide="star" class="w-7 h-7 fill-current"></i>
+                        <i data-lucide="star" class="w-7 h-7 fill-current"></i>
+                        <i data-lucide="star" class="w-7 h-7 fill-current"></i>
+                        <i data-lucide="star" class="w-7 h-7 fill-current"></i>
+                    </div>
+                    <span class="uppercase tracking-[0.2em] text-xs font-semibold text-gray-500">Overall Rating</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brand-bg p-8 rounded-sm border border-brand-accent/10 hover:border-brand-accent/30 transition-colors">
+                    <div class="flex gap-1 text-brand-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-gray-300"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Good ambience, tasty food, family-friendly seating. A must-visit place for lunch or dinner in Puri."</p>
+                    <h4 class="font-bold text-gray-900 text-sm uppercase tracking-widest">- Rahul M.</h4>
+                </div>
+                <div class="bg-brand-bg p-8 rounded-sm border border-brand-accent/10 hover:border-brand-accent/30 transition-colors">
+                    <div class="flex gap-1 text-brand-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-gray-300"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"The Chicken Biryani was absolutely delicious. The Chinese food was also great. Very polite staff."</p>
+                    <h4 class="font-bold text-gray-900 text-sm uppercase tracking-widest">- Snigdha D.</h4>
+                </div>
+                <div class="bg-brand-bg p-8 rounded-sm border border-brand-accent/10 hover:border-brand-accent/30 transition-colors">
+                    <div class="flex gap-1 text-brand-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Great fine dining experience near the sea beach. Comfortable AC seating which is perfect for summers."</p>
+                    <h4 class="font-bold text-gray-900 text-sm uppercase tracking-widest">- Amit K.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation -->
+    <section id="reservation" class="py-24 bg-brand-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Book Your Table</h2>
+                    <div class="w-16 h-1 bg-brand-accent mb-8"></div>
+                    <p class="text-brand-secondary/80 text-lg mb-8 leading-relaxed">
+                        Ensure a perfect dining experience for you and your family. Book your table in advance and let us take care of the rest. We also accommodate large groups and special occasions.
+                    </p>
+                    <div class="bg-white/5 p-6 md:p-8 rounded-sm relative overflow-hidden backdrop-blur-md border border-white/10 text-center md:text-left">
+                        <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-brand-accent"></div>
+                        <p class="text-brand-secondary text-[10px] md:text-xs uppercase tracking-[0.2em] mb-4 font-semibold opacity-90 pl-2">For Immediate Inquiries</p>
+                        <p class="text-3xl md:text-4xl font-sans text-white tracking-widest font-light pl-2">+91 93487 79657</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-sm text-gray-900 shadow-xl">
+                    <form id="reservation-form" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="res-name" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-shadow" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                <input type="tel" id="res-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-shadow" placeholder="+91 XXXX XXXXX">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                                <input type="date" id="res-date" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-shadow">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                                <input type="time" id="res-time" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-shadow">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Guests</label>
+                            <select id="res-guests" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-shadow bg-white">
+                                <option>2 People</option>
+                                <option>3 People</option>
+                                <option>4 People</option>
+                                <option>5 People</option>
+                                <option>6+ People</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-brand-accent text-gray-900 font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-yellow-500 transition-colors cursor-pointer">
+                            Confirm Reservation via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1 border-r border-gray-800 pr-4">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="text-brand-accent">
+                            <i data-lucide="utensils" class="w-8 h-8"></i>
+                        </div>
+                        <span class="font-display font-bold text-xl text-white">Fine Dine A/C Restaurant</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        Multi-cuisine family restaurant in Puri offering North Indian and Chinese dishes with comfortable indoor seating and a fine dining atmosphere.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                            <a href="https://maps.app.goo.gl/YhKoou48pCRcDeh49" target="_blank" rel="noopener noreferrer" class="text-sm hover:text-white transition-colors">Sea Beach Road, Hariharchhaka, Puri, Odisha, India - 752001</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-accent flex-shrink-0"></i>
+                            <span class="text-sm">+91 93487 79657 <br> +91 70080 12345</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-accent flex-shrink-0"></i>
+                            <span class="text-sm">finedinepuri@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Hours</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        
+                        <li class="flex justify-between">
+                            <span>Monday</span>
+                            <span>8:00 AM – 12:00 AM</span>
+                        </li>
+                        
+                        <li class="flex justify-between">
+                            <span>Tuesday</span>
+                            <span>8:00 AM – 12:00 AM</span>
+                        </li>
+                        
+                        <li class="flex justify-between">
+                            <span>Wednesday</span>
+                            <span>8:00 AM – 12:00 AM</span>
+                        </li>
+                        
+                        <li class="flex justify-between">
+                            <span>Thursday</span>
+                            <span>8:00 AM – 12:00 AM</span>
+                        </li>
+                        
+                        <li class="flex justify-between">
+                            <span>Friday</span>
+                            <span>8:00 AM – 12:00 AM</span>
+                        </li>
+                        
+                        <li class="flex justify-between">
+                            <span>Saturday</span>
+                            <span>8:00 AM – 12:00 AM</span>
+                        </li>
+                        
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>8:00 AM – 12:00 AM</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Features</h4>
+                    <ul class="grid gap-2 text-sm text-gray-400">
+                        
+                        <li class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                            Dine-in, Takeaway & Delivery
+                        </li>
+                        
+                        <li class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                            Air Conditioned
+                        </li>
+                        
+                        <li class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                            Family Seating
+                        </li>
+                        
+                        <li class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                            Limited Parking
+                        </li>
+                        
+                        <li class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                            Cash, UPI, Card Accepted
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>© 2026 Fine Dine A/C Restaurant. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script loading Lucide icons + Custom scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

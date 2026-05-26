@@ -1,0 +1,17 @@
+/* Custom animations and styling added via Tailwind v4 config block inside index.html */
+/* Add any vanilla CSS overrides here if needed */
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
